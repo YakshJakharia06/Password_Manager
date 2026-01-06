@@ -92,18 +92,18 @@ const Manager = () => {
         <div className='text-black flex items-center flex-col p-5'>
 
 
-          <input value={form.site} onChange={handleChange} className='border-green-500 border-2 w-full md:w-full text-black px-4 py-1 rounded-full' placeholder='Enter website url' type="url" name='site' id='site' />
+          <input required value={form.site} onChange={handleChange} className='border-green-500 border-2 w-full md:w-full text-black px-4 py-1 rounded-full' placeholder='Enter website url' type="url" name='site' id='site' />
 
 
           <div className='md:flex not-md:flex-col w-full justify-between gap-7'>
-            <input value={form.username} onChange={handleChange} className='border-2 border-green-500 rounded-full w-full px-4 py-1 my-5' type="text" placeholder='Enter username' name='username' id='username' />
+            <input required value={form.username} onChange={handleChange} className='border-2 border-green-500 rounded-full w-full px-4 py-1 my-5' type="text" placeholder='Enter username' name='username' id='username' />
 
 
             {/* show hide password */}
 
             <div className='relative md:my-5'>
 
-              <input value={form.password} onChange={handleChange} className='border-2 border-green-500 rounded-full md:w-50 not-md:w-full px-4 py-1' type={showPassword ? "text" : "password"} placeholder='Enter password' name='password' id='password' />
+              <input required value={form.password} onChange={handleChange} className='border-2 border-green-500 rounded-full md:w-50 not-md:w-full px-4 py-1' type={showPassword ? "text" : "password"} placeholder='Enter password' name='password' id='password' />
               <span onClick={togglePasswordVisibility} className='absolute right-2 top-1 rounded-full hover:cursor-pointer'>
                 {showPassword ? <img src='/eye-close.png' /> : <img src='/eye-open.png' />}
               </span>
