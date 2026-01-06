@@ -11,29 +11,15 @@ const Manager = () => {
   const [showPassword, setShowPassword] = useState(false);
 
 
-  const getPasswords = async () => {
-    try {
-        // console.log("Fetching from server...");
-        let req = await fetch("http://localhost:3000/")
-        
-        if (!req.ok) {
-            console.error("Server error:", req.status);
-            return;
-        }
-
-        let passwords = await req.json()
-        // console.log("Data received from DB:", passwords)
-        setPasswordArray(passwords)
-    } catch (error) {
-        console.error("Could not connect to backend:", error);
-    }
-}
 
   useEffect(() => {
-    // console.log("useEffect triggered - Fetching data...");
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    getPasswords()
+    let passwords = localStorage.getItem("passwords");
+    if (passwords) {
+      setPasswordArray(JSON.parse(passwords))
+    }
   }, [])
+
+
 
   const togglePasswordVisibility = () => {
     // Just flip the boolean
@@ -44,11 +30,10 @@ const Manager = () => {
 
   const savePassword = async () => {
     if (form.site.length > 5 && form.username.length > 3 && form.password.length > 5) {
-      
-      
+
+
       setPasswordArray([...passwordArray, { ...form, id: uuidv4() }]);
-      let res = await fetch("http://localhost:3000/", {method: "POST" , headers: {"Content-Type": "application/json"}, body: JSON.stringify({...form, id: uuidv4()})})
-      // localStorage.setItem("passwords", JSON.stringify([...passwordArray, { ...form, id: uuidv4() }]));
+      localStorage.setItem("passwords", JSON.stringify([...passwordArray, { ...form, id: uuidv4() }]));
       setForm({ site: "", username: "", password: "" });
       alert('Password Saved Successfully!')
 
@@ -66,8 +51,7 @@ const Manager = () => {
     let c = confirm("Do you really want to delete this password ?")
     if (c) {
       setPasswordArray(passwordArray.filter(item => item.id !== id))
-      let res = await fetch("http://localhost:3000/", {method: "DELETE" , headers: {"Content-Type": "application/json"}, body: JSON.stringify({...form, id})})
-      // localStorage.setItem("passwords", JSON.stringify(passwordArray.filter(item => item.id !== id)))
+      localStorage.setItem("passwords", JSON.stringify(passwordArray.filter(item => item.id !== id)))
     }
   }
 
@@ -108,11 +92,11 @@ const Manager = () => {
         <div className='text-black flex items-center flex-col p-5'>
 
 
-          <input value={form.username} onChange={handleChange} className='border-green-500 border-2 w-full md:w-full text-black px-4 py-1 rounded-full' placeholder='Enter username' type="text" name='username' id='username' />
+          <input value={form.site} onChange={handleChange} className='border-green-500 border-2 w-full md:w-full text-black px-4 py-1 rounded-full' placeholder='Enter website url' type="url" name='site' id='site' />
 
 
           <div className='md:flex not-md:flex-col w-full justify-between gap-7'>
-            <input value={form.site} onChange={handleChange} className='border-2 border-green-500 rounded-full w-full px-4 py-1 my-5' type="text" placeholder='Enter website url' name='site' id='site' />
+            <input value={form.username} onChange={handleChange} className='border-2 border-green-500 rounded-full w-full px-4 py-1 my-5' type="text" placeholder='Enter username' name='username' id='username' />
 
 
             {/* show hide password */}
@@ -185,11 +169,9 @@ const Manager = () => {
 
                         <div className='md:flex not-md:text-start items-center justify-center'>
 
-                          <span>{item.password}</span>
+                          <span>{"*".repeat(item.password.length)}</span>
 
-                          <div className='cursor-pointer' onClick={() => { copyText(item.password) }}>
-                            <img className='md:px-2 px-0.5 md:w-10 w-7' src="/copy.png" alt="" />
-                          </div>
+                          
 
                         </div>
 
