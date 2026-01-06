@@ -7,12 +7,15 @@ const Navbar = () => {
         Password-Manager
       </div>
       
-      <button className='flex hover:cursor-pointer gap-2 justify-between items-center px-2 py-1 border-2 rounded-full'>
-        <img className='invert w-10' src="/github.png" alt="" />
-        <span className='not-md:pr-5'>GitHub</span>
-      </button>
+      <a href="https://github.com/" target='_blank'>
+        <button className='flex hover:cursor-pointer gap-2 justify-between items-center px-2 py-1 border-2 rounded-full'>
+          <img className='invert w-10' src="/github.png" alt="" />
+          <span className='not-md:pr-5'>GitHub</span>
+        </button>
+      </a>
     </nav>
   )
 }
+
 
 export default Navbar
