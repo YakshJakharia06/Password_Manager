@@ -1,16 +1,39 @@
-# React + Vite
+# PassOP - Your Own Password Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="./public/password-manager.png" alt="PassOP Project Preview" width="400" height="400" style="border-radius: 10px;">
+</p>
 
-Currently, two official plugins are available:
+PassOP is a sleek and secure web application built with **React** and **Tailwind CSS**. It provides a clean interface for managing your digital credentials, ensuring you never lose a password again.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **🚀 Effortless Management:** Quickly add website URLs, usernames, and passwords through a streamlined interface.
+- **👁️ Password Toggle:** Securely view or hide your password while typing using the visibility icon.
+- **📱 Responsive Design:** A fully fluid layout that works perfectly on mobile, tablet, and desktop screens.
+- **💾 Local Storage:** Your data stays with you; credentials are saved locally in your browser for persistent access.
+- **🎨 Modern UI:** A vibrant, green-themed aesthetic built for clarity and ease of use.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- **Frontend:** [React.js](https://react.dev/) (Vite)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** React Icons
+- **Build Tool:** Vite (Fast HMR)
+
+---
+
+## Getting Started
+
+Follow these steps to set up the project locally:
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/yourusername/password-manager.git](https://github.com/yourusername/password-manager.git)
+   npm install
+   npm run dev
+   ```
