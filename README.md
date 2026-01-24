@@ -10,11 +10,11 @@ PassOP is a sleek and secure web application built with **React** and **Tailwind
 
 ## Features
 
-- **🚀 Effortless Management:** Quickly add website URLs, usernames, and passwords through a streamlined interface.
-- **👁️ Password Toggle:** Securely view or hide your password while typing using the visibility icon.
-- **📱 Responsive Design:** A fully fluid layout that works perfectly on mobile, tablet, and desktop screens.
-- **💾 Local Storage:** Your data stays with you; credentials are saved locally in your browser for persistent access.
-- **🎨 Modern UI:** A vibrant, green-themed aesthetic built for clarity and ease of use.
+- **Effortless Management:** Quickly add website URLs, usernames, and passwords through a streamlined interface.
+- **Password Toggle:** Securely view or hide your password while typing using the visibility icon.
+- **Responsive Design:** A fully fluid layout that works perfectly on mobile, tablet, and desktop screens.
+- **Local Storage:** Your data stays with you; credentials are saved locally in your browser for persistent access.
+- **Modern UI:** A vibrant, green-themed aesthetic built for clarity and ease of use.
 
 ---
 
@@ -33,7 +33,7 @@ Follow these steps to set up the project locally:
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/YakshJakharia06/password-manager.git](https://github.com/yourusername/password-manager.git)
+   git clone [https://github.com/YakshJakharia06/Password-Manager.git](https://github.com/YakshJakharia06/Password-Manager.git)
    npm install
    npm run dev
    ```
