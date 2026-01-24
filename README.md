@@ -1,7 +1,7 @@
 # PassOP - Your Own Password Manager
 
 <p align="center">
-  <img src="./public/password-manager.png" alt="PassOP Project Preview" width="400" height="400" style="border-radius: 10px;">
+  <img src="./public/password-manager.png" alt="PassOP Project Preview" width="800" height="800" style="border-radius: 10px;">
 </p>
 
 PassOP is a sleek and secure web application built with **React** and **Tailwind CSS**. It provides a clean interface for managing your digital credentials, ensuring you never lose a password again.
