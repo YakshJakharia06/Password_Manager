@@ -32,8 +32,12 @@ PassOP is a sleek and secure web application built with **React** and **Tailwind
 Follow these steps to set up the project locally:
 
 1. **Clone the repository**
-   ```bash
+   ```
    git clone [https://github.com/YakshJakharia06/Password-Manager.git](https://github.com/YakshJakharia06/Password-Manager.git)
+   ```
+   ```
    npm install
+   ```
+   ```
    npm run dev
    ```
